@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earnings Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimePrice</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Earnings Calculator</h1>
-        
-        <div class="input-group">
-            <label for="wage">Hourly Wage (£)</label>
-            <input type="number" id="wage" step="0.01" min="0.01" placeholder="Enter hourly wage">
-        </div>
-        
-        <div class="input-group">
-            <label for="hours">Hours Worked</label>
-            <input type="number" id="hours" step="1" min="0" placeholder="Enter hours">
-        </div>
+  <div class="container">
+    <h1>TimePrice</h1>
+    <p class="subtitle">Know how long it takes to afford your items.</p>
 
-        <div class="input-group">
-            <label for="minutes">Minutes Worked</label>
-            <input type="number" id="minutes" step="1" min="0" max="59" placeholder="Enter minutes">
-        </div>
-
-        <div id="results" class="results-container">
-            <div class="result-item">
-                <span>Total Earnings:</span>
-                <span id="totalEarnings">-</span>
-            </div>
-        </div>
+    <div class="input-group">
+      <label for="salary">Monthly Salary (£):</label>
+      <input type="number" id="salary" value="1000" min="0">
     </div>
 
-    <script src="js/app.js"></script>
+    <div class="input-group">
+      <label for="price">Item Price (£):</label>
+      <input type="number" id="price" min="0">
+    </div>
+
+    <div class="output">
+      <h2>Time to Afford:</h2>
+      <p id="natural-time"></p>
+      <p id="work-days"></p>
+      <p id="months"></p>
+
+      <h2>Percentage of Wages:</h2>
+      <p id="hourly-percent"></p>
+      <p id="daily-percent"></p>
+      <p id="weekly-percent"></p>
+      <p id="monthly-percent"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
